@@ -1,0 +1,32 @@
+.cards {
+  width: 300px;
+  height: auto; /* Allow the card height to adjust based on content */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between elements */
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(5px); /* Increased blur for a smoother effect */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px; /* Adjusted padding for better spacing */
+}
+
+.heading {
+  text-align: center; /* Center the heading text */
+}
+
+.body {
+  flex-grow: 1; /* Allow the body to take remaining space */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  font-size: 20px;
+  cursor: pointer;
+}

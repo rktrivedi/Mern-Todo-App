@@ -18,6 +18,10 @@ const Todo = () => {
     console.log(Array);
     setInputs({title: "", body: ""});
   };
+
+  const del = (id) => {
+    console.log(id);
+  };
   return (
     <div className="mainContanier">
       <div className="todo-main">
@@ -25,6 +29,7 @@ const Todo = () => {
           <h3>Add Your Task </h3>
           <div className="input-box">
             <input
+              maxlength="50"
               type="text"
               placeholder="Title"
               value={input.title}
@@ -33,7 +38,7 @@ const Todo = () => {
             />
             <MdSubtitles className="icon" />
           </div>
-          <div className="input-box textarea">
+          <div className=" textarea">
             <textarea
               type="text"
               placeholder=""
@@ -43,23 +48,39 @@ const Todo = () => {
             />
             {/* <BiSolidMessageRoundedDetail className="icon" /> */}
           </div>
+          <div className="button">
+            <button onClick={submit} type="submit">
+              Add Task
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="cardlist">
+        <div className="controls">
+          <input type="search"></input>
           <button onClick={submit} type="submit">
             Add Task
           </button>
         </div>
-      </div>
-      <div className="cardlist">
-        <div className="'todolist">
-          <div className="todolistcard">
-            <div className="container">
-              {Array &&
-                Array.map((item, idx) => (
-                  <>
-                    <Cards />
-                  </>
-                ))}
-            </div>
-          </div>
+        <div className="container1">
+          {Array &&
+            Array.map((item, idx) => (
+              <>
+                <Cards
+                  id={idx}
+                  key={idx}
+                  delid={del}
+                  title={item.title}
+                  body={item.body}
+                />
+              </>
+            ))}
+        </div>
+        <div className="pagination">
+          <h6>1</h6>
+          <h6>2</h6>
+          <h6>3</h6>
+          <h6>4</h6>
         </div>
       </div>
     </div>
