@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./About.css";
 import VanillaTilt from "vanilla-tilt";
 import {useEffect} from "react";
 import {Link} from "react-router-dom";
@@ -54,7 +54,7 @@ const Home = () => {
         </nav>
         <div className="contains">
           <div className="section-1">
-            <h1>Welcome</h1>
+            <h1>About Us</h1>
             <h3>
               To Our <span>' </span>Task Management<span> '</span>
               <br></br>
