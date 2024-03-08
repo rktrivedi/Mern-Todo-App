@@ -7,7 +7,7 @@ import {TbProgressAlert} from "react-icons/tb";
 import {IoIosArrowDown} from "react-icons/io";
 import {IoIosArrowUp} from "react-icons/io";
 
-const Cards = ({title, body, id, delid}) => {
+const Cards = ({title, body, id, delid, updateList}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -35,8 +35,8 @@ const Cards = ({title, body, id, delid}) => {
           <div className="buttons">
             <TbProgressAlert className="icons" />
             <FaCheckSquare className="icons" />
-            <MdEditSquare className="icons" />
-            <MdDelete className="icons" onClick={() => (delid = {id})} />
+            <MdEditSquare onClick={updateList} className="icons" />
+            <MdDelete className="icons" onClick={() => delid(id)} />
           </div>
         </div>
       )}

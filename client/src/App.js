@@ -10,6 +10,7 @@ import Services from "./Components/Services/Services";
 import Contact from "./Components/Contact/Contact";
 import SignIn from "./Components/LogIn/SignIn";
 import Todo from "./Components/Todo/Todo";
+import Demo from "./Components/Demo/Demo";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/Todo" element={<Todo />} />
+          <Route path="/Demo" element={<Demo />} />
         </Routes>
       </Router>
     </div>

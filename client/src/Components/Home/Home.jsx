@@ -50,6 +50,11 @@ const Home = () => {
                 Todo
               </Link>
             </li>
+            <li>
+              <Link className="link" to="/Demo">
+                Demo
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="contains">
